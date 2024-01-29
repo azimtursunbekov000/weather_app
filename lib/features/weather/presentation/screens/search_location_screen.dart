@@ -117,23 +117,6 @@ class SearchLocationScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Stack(
-            //   alignment: Alignment.topCenter,
-            //   children: [
-            // Container(
-            //   height: 300,
-            //   decoration: BoxDecoration(
-            //     image: DecorationImage(
-            //         image: AssetImage('assets/icons/House.png'),
-            //         fit: BoxFit.cover),
-            //   ),
-            // ),
-
-            //     Positioned(
-            //       bottom: 70,
-            //     ),
-            //   ],
-            // ),
           ],
         ),
       ),
