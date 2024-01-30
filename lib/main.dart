@@ -10,6 +10,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // localizationsDelegates: const [
+      //       S.delegate,
+      //       GlobalMaterialLocalizations.delegate,
+      //       GlobalWidgetsLocalizations.delegate,
+      //       GlobalCupertinoLocalizations.delegate,
+      //     ],
+      //     locale: const Locale('ru'),
+      //     supportedLocales: S.delegate.supportedLocales,
+
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

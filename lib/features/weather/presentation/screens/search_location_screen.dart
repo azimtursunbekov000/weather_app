@@ -76,10 +76,9 @@ class SearchLocationScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 40,
-                  vertical: 10,
+                  vertical: 40,
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextField(
                       decoration: InputDecoration(
