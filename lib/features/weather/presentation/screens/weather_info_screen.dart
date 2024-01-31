@@ -24,33 +24,46 @@ class _WeatherInfoScreenState extends State<WeatherInfoScreen> {
         return 'assets/animations/cloudy_weather.json';
       case 'rain':
       case 'drizzle':
-      case 'shower rain':
+      case 'light snow':
+      case 'snow':
         return 'assets/animations/show.json';
       case 'clear':
-        return 'assets/animations/clear.json';
+        return 'assets/animations/clear_weather.json';
+
+      case 'overcast clouds':
+        return 'assets/animations/overcast_clouds.json';
 
       default:
-        return 'assets/animations/clear.json';
+        return 'assets/animations/clear_weather.json';
     }
   }
 
   @override
   Widget build(BuildContext context) {
     double fahrenheitTemperature = widget.weatherModel.main?.temp ?? 0;
-    double celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
+    double celsiusTemperature = (fahrenheitTemperature - 273.13);
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Colors.blue[800],
+      appBar: AppBar(
+        backgroundColor: Colors.blue[800],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("${widget.weatherModel.name}"),
+            Text(
+              "${widget.weatherModel.name}",
+              style: TextStyle(color: Colors.white),
+            ),
             Lottie.asset(
               getWeatherAnimation(widget.weatherModel.weather?.first.main),
               width: 300,
               height: 300,
             ),
-            Text("${celsiusTemperature.round()} °C"),
+            Text(
+              "${celsiusTemperature.round()} °C",
+              style: TextStyle(color: Colors.white),
+            ),
           ],
         ),
       ),
